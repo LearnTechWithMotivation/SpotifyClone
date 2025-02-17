@@ -1,0 +1,495 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: SpotifyMixUITitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+}
+
+:root {
+    --subtle-black: rgb(138, 138, 138);
+    --spotify-green: #1fe164;
+
+}
+
+
+body {
+    background-color: black;
+}
+
+
+.navBar ul {
+    height: 10vh;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: var(--subtle-black);
+
+}
+
+.navBar li {
+    padding: 1%;
+}
+
+.navBar li a {
+    transition: transform 0.3s ease;
+}
+
+.navBar li a:hover {
+    color: white;
+}
+
+#logo {
+    height: inherit;
+}
+
+#logo img {
+    max-height: 100%;
+    width: auto;
+}
+
+#searchBar {
+    justify-content: space-between;
+    gap: 1%;
+}
+
+#searchBar i {
+    background-color: rgb(49, 49, 49);
+    padding: 2%;
+    font-size: 1.5em;
+}
+
+#searchBar input {
+    width: 40vw;
+    height: 40px;
+    border: none;
+    padding-left: 5%;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(40, 40, 40);
+    transition: border ease-in 150ms;
+}
+
+#searchBar input::placeholder {
+    position: relative;
+    left: 2%;
+}
+
+#searchBar input:focus {
+    border: 0.2em solid white;
+}
+
+.loginSignup {
+    gap: 5%;
+    color: var(--subtle-black);
+}
+
+.sbox {
+    position: relative;
+}
+
+.sbox i {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0.7);
+    background-color: hsl(0, 100%, 53%);
+}
+
+#signup {
+    color: var(--subtle-black);
+}
+
+#signup:hover {
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.loginSignup button:hover {
+    cursor: pointer;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: "side main";
+    padding: 1%;
+    /* height: 100vh; */
+    /* grid-template-columns: repeat(3,1fr); */
+    gap: 1%;
+}
+
+
+
+
+.list {
+    grid-area: main;
+    background-image: linear-gradient(to bottom, #222222, #202020, #181818, #0e0e0e, #000000);
+    /* max-width: 75vw; */
+
+}
+
+h2 {
+    color: white;
+}
+
+.sideBar {
+    grid-area: side;
+    height: fit-content;
+    max-width: 20vw;
+    background-color: #121212;
+}
+
+
+h3 {
+    font-size: small;
+    font-weight: 100;
+    margin-bottom: 2%;
+}
+
+h5 {
+    font-weight: 100;
+    /* white-space:inherit; */
+}
+
+.heading {
+    justify-content: space-between;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5em;
+    padding: 1%;
+    gap: 1%;
+}
+
+.artist-prof {
+    position: relative;
+}
+
+.fa-play {
+    font-size: 1.5em;
+}
+
+.play {
+    position: absolute;
+    right: 5%;
+    justify-content: center;
+    bottom: 5%;
+    padding: 1em;
+    background-color: var(--spotify-green);
+}
+
+
+.card:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to top, #282828, #262626, #242424, #222222, #202020);
+}
+
+
+.cards {
+    gap: 1%;
+}
+
+#Artists {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#Artists .card img {
+    height: 10em;
+    width: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em ;
+}
+#Albums .card img,
+#Radio .card img,
+#Indias-Best .card img,
+#Charts .card img {
+    height: 10em;
+    width: 10em;
+    object-fit: cover;
+    border-radius: 0.2em;
+}
+
+.blurrImg img{
+    filter: brightness(50%);
+}
+
+#Albums .cards,
+#Radio .cards,
+#Indias-Best .cards,
+#Charts .cards {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.library>div:first-child {
+    width: 100%;
+    padding: 5%;
+    justify-content: space-between;
+    font-size: 1.3em;
+}
+
+.fa-plus {
+    background-color: #121212;
+    padding: 0.3em;
+}
+
+.fa-plus:hover {
+    background-color: #1F1F1F;
+    padding: 0.3em;
+    border-radius: 50%;
+}
+
+#create-playlist {
+    box-sizing: unset;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    padding: 10% 2%;
+    margin: 5%;
+    color: white;
+    background-color: #1F1F1F;
+}
+
+#create-playlist p {
+    font-size: small;
+}
+
+#create-playlist> :nth-child(1) {
+    font-weight: bold;
+}
+
+#create-playlist-btn {
+    font-weight: bolder;
+    width: 50%;
+    padding: 5% 10%;
+    justify-content: center;
+
+}
+
+.foots {
+    font-size: 0.65em;
+    padding: 10%;
+    width: 100%;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10%;
+    align-items: center;
+    row-gap: 2em;
+}
+
+.foots>*:hover {
+    cursor: pointer;
+
+}
+
+.end {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    padding: 0 10%;
+    color: white;
+}
+
+.end :first-child {
+    font-size: 0.8em;
+}
+
+.end button {
+    justify-content: space-between;
+    gap: 0.5em;
+    padding: 5% 10%;
+    font-weight: bold;
+    background-color: black;
+    color: #fff;
+    border: 0.01em solid white
+}
+
+
+
+
+
+button {
+    border: none;
+}
+
+.auth-button {
+    height: 40px;
+    width: 7vw;
+}
+
+.bora0p5em {
+    border-radius: 0.5em;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.pad2 {
+    padding: 2%;
+}
+
+.subtleText {
+    color: var(--subtle-black);
+}
+
+.whiteText {
+    color: white;
+}
+
+.pop-white:hover {
+    color: white;
+    cursor: pointer;
+    /* font-weight: bolder; */
+    transition: color ease-in 100ms;
+
+}
+
+.pop:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.nobg {
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex-align-centre {
+    display: flex;
+    align-items: center;
+}
+
+.circular-radius {
+    border-radius: 50%;
+}
+
+.curvy-border {
+    border-radius: 5em;
+}
+
+.vanish {
+    display: none;
+}
+
+/* Base styles */
+.progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #292929;
+    /* Track color */
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Chrome, Safari, Edge */
+.progress-bar::-webkit-slider-runnable-track {
+    background: #292929;
+    /* Track color */
+    border-radius: 5px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: aqua;
+    border: 1px solid black;
+    /* Spotify Green */
+    border-radius: 50%;
+    cursor: pointer;
+    /* margin-top: -4px; */
+    /* Center thumb */
+}
+
+/* Firefox */
+.progress-bar::-moz-range-track {
+    background: #292929;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: aqua;
+    border: 1px solid black;
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media (max-width:480px) {
+    #logo img {
+        max-height: 40px;
+        width: auto;
+    }
+
+
+    .main {
+        grid-template-areas:
+            "main"
+            "side";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .hide-in-small {
+        display: none;
+    }
+
+    .sideBar {
+        max-width: 100vw;
+    }
+
+    .list {
+        margin-top: 2%;
+        max-width: 100vw;
+    }
+
+    #Artists,
+    #Albums,
+    #Radio,
+    #Charts,
+    #Indias-Best {
+        max-width: 95vw;
+        overflow: scroll;
+    }
+
+    .auth-button {
+        width: 4.5em;
+        height: 2em;
+        white-space: nowrap;
+    }
+
+    #searchBar input::placeholder {
+        font-size: 0.7em;
+        position: initial;
+        /* left: 2%; */
+    }
+}

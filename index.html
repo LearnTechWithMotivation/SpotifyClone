@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- 
+        IMPORTS
+    -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://learntechwithmotivation.github.io/Hoster//SpotifyLogo.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navBar">
+      <ul class="flex-align-centre">
+        <li id="logo" class="flex-align-centre">
+          <img
+            src="https://learntechwithmotivation.github.io/Hoster/SpotifyBWLogo.png"
+            alt="logo"
+          />
+        </li>
+
+        <li id="searchBar" class="flex-align-centre">
+          <i
+            class="fa-solid fa-house circular-radius"
+            style="color: #ffffff"
+          ></i>
+          <input
+            type="text"
+            name="Search"
+            id="search"
+            class="curvy-border input"
+            placeholder="What do you want to Play?"
+          />
+        </li>
+
+        <li class="hide-in-small"><a href="">Premium</a></li>
+        <li class="hide-in-small"><a href="">Support</a></li>
+        <li class="hide-in-small"><a href="">Download</a></li>
+        <li class="hide-in-small"><a href="">|</a></li>
+        <li class="hide-in-small"><a href="" class="noWrap">Install App</a></li>
+        <li class="loginSignup flex-align-centre">
+          <button class="auth-button curvy-border pop nobg" id="signup">
+            Sign up
+          </button>
+          <button class="auth-button curvy-border pop" id="login">Login</button>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main">
+      <section class="list bora0p5em">
+        <section id="Artists" class="pad2">
+          <div class="heading flex-align-centre">
+            <h2>Featured Artists</h2>
+          </div>
+
+          <div class="cards flex-align-centre">
+            <div class="card">
+              <div class="artist-prof">
+                <img src="./Artists/5.jpeg" alt="SPB" />
+                <div class="play vanish flex-align-centre circular-radius">
+                  <i class="fa-solid fa-play" style="color: rgb(0, 0, 0)"></i>
+                </div>
+              </div>
+              <h3 class="whiteText">S. P. Balasubrahmanyam</h3>
+              <h5 class="subtleText">Artist</h5>
+            </div>
+
+            <div class="card">
+              <div class="artist-prof">
+                <img src="./Artists/8.jpeg" alt="Person Profile" />
+                <div class="play vanish flex-align-centre circular-radius">
+                  <i class="fa-solid fa-play" style="color: rgb(0, 0, 0)"></i>
+                </div>
+              </div>
+              <h3 class="whiteText">Siddharth</h3>
+              <h5 class="subtleText">Artist/Actor</h5>
+            </div>
+
+            <div class="card">
+              <div class="artist-prof">
+                <img src="./Artists/1.jpeg" alt="Person Profile" />
+                <div class="play vanish flex-align-centre circular-radius">
+                  <i class="fa-solid fa-play" style="color: rgb(0, 0, 0)"></i>
+                </div>
+              </div>
+              <h3 class="whiteText">Luis Fonsi</h3>
+              <h5 class="subtleText">Artist</h5>
+            </div>
+
+            <div class="card">
+              <div class="artist-prof">
+                <img src="./Artists/2.jpeg" alt="Person Profile" />
+                <div class="play vanish flex-align-centre circular-radius">
+                  <i class="fa-solid fa-play" style="color: rgb(0, 0, 0)"></i>
+                </div>
+              </div>
+              <h3 class="whiteText">Sri Druthi</h3>
+              <h5 class="subtleText">Artist</h5>
+            </div>
+
+            <div class="card">
+              <div class="artist-prof">
+                <img src="./Artists/4.jpeg" alt="Person Profile" />
+                <div class="play vanish flex-align-centre circular-radius">
+                  <i class="fa-solid fa-play" style="color: rgb(0, 0, 0)"></i>
+                </div>
+              </div>
+              <h3 class="whiteText">Govind vasantha and pradeep</h3>
+              <h5 class="subtleText">Artist</h5>
+            </div>
+          </div>
+        </section>
+
+        <section id="Albums" class="pad2">
+          <div class="heading flex-align-centre">
+            <h2>Featured Songs</h2>
+          </div>
+
+          <div class="cards">
+            <div class="card" id="s1">
+              <div class="artist-prof">
+                <img src="./SongPics/1.despacito.jpeg" alt="Despacito" />
+              </div>
+              <!-- <i class="fa-solid fa-play"></i> -->
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek1"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+              <h3 class="whiteText">Despacito</h3>
+              <h5 class="subtleText">Luis Fonsi</h5>
+            </div>
+
+            <div class="card" id="s2">
+              <div class="artist-prof">
+                <img src="/SongPics/2.anaganaga.jpeg" alt="anaganaga " />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek2"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Anaganaga Oka Uru</h3>
+              <h5 class="subtleText">Sri Druthi</h5>
+            </div>
+
+            <div class="card" id="s3">
+              <div class="artist-prof">
+                <img src="./SongPics/3.nuvvante.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek3"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Nuvvante na navvu</h3>
+              <h5 class="subtleText">Haricharan and Sindhur</h5>
+            </div>
+
+            <div class="card" id="s4">
+              <div class="artist-prof">
+                <img src="/SongPics/4.lifeofram.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek4"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">The Life of RAM</h3>
+              <h5 class="subtleText">Govind vasantha</h5>
+            </div>
+
+            <div class="card" id="s5">
+              <div class="artist-prof">
+                <img src="/SongPics/5.akasam.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek5"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Akasam lo oka Tara</h3>
+              <h5 class="subtleText">S. P. Balasubrahmanyam</h5>
+            </div>
+
+            <div class="card" id="s6">
+              <div class="artist-prof">
+                <img src="/SongPics/6.koncham.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek6"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Koncham Koncham</h3>
+              <h5 class="subtleText">Vijay prakash</h5>
+            </div>
+
+            <div class="card" id="s7">
+              <div class="artist-prof">
+                <img src="/SongPics/7.venello.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek7"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Venello Adapille ila</h3>
+              <h5 class="subtleText">Sweekar Agasthi</h5>
+            </div>
+
+            <div class="card" id="s8">
+              <div class="artist-prof">
+                <img src="/SongPics/8.apudoipudo.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek8"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Apudo ipudo epudo</h3>
+              <h5 class="subtleText">Siddharth</h5>
+            </div>
+
+            <div class="card" id="s9">
+              <div class="artist-prof">
+                <img src="/SongPics/9.jabillikosam.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek9"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Jabilli Kosam Akasamalle</h3>
+              <h5 class="subtleText">S. P. Balasubrahmanyam</h5>
+            </div>
+
+            <div class="card" id="s10">
+              <div class="artist-prof">
+                <img
+                  src="/SongPics/10.redemmatalli.jpeg"
+                  alt="Person Profile"
+                />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek10"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Redemma Talli</h3>
+              <h5 class="subtleText">Mohana Bhogaraju</h5>
+            </div>
+
+            <div class="card" id="s11">
+              <div class="artist-prof">
+                <img src="/SongPics/11.aaseetha.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek11"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Aa seetha devaina</h3>
+              <h5 class="subtleText">Shriya</h5>
+            </div>
+
+            <div class="card" id="s12">
+              <div class="artist-prof">
+                <img src="/SongPics/12.meenu.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek12"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Meenu</h3>
+              <h5 class="subtleText">Bheems Ceciroleo</h5>
+            </div>
+
+            <div class="card" id="s13">
+              <div class="artist-prof">
+                <img src="/SongPics/13.aashapasham.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek13"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Asha pasham</h3>
+              <h5 class="subtleText">Anurag Kulkarni</h5>
+            </div>
+
+            <div class="card" id="s14">
+              <div class="artist-prof">
+                <img src="/SongPics/14.neechupule.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek14"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Nee chupule</h3>
+              <h5 class="subtleText">Haricharan</h5>
+            </div>
+
+            <div class="card" id="s15">
+              <div class="artist-prof">
+                <img src="/SongPics/15.ythis.jpeg" alt="Person Profile" />
+              </div>
+              <input
+                class="progress-bar"
+                type="range"
+                id="seek15"
+                value="0"
+                min="0"
+                step="0.1"
+              />
+
+              <h3 class="whiteText">Y this kolaveri di</h3>
+              <h5 class="subtleText">Dhanush</h5>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="sideBar bora0p5em">
+        <div class="library">
+          <div class="flex-align-centre subtleText">
+            <div>
+              <i class="fa-solid fa-book pop-white"></i>
+            </div>
+            <div class="pop-white">Your Library</div>
+            <div>
+              <i class="fa-solid fa-plus pop-white"></i>
+            </div>
+          </div>
+
+          <div id="create-playlist" class="flex-align-centre bora0p5em">
+            <p>Create your first Playlist</p>
+            <p>It's easy, we'll help you</p>
+            <button
+              id="create-playlist-btn"
+              class="flex-align-centre noWrap curvy-border pop"
+            >
+              Create Playlist
+            </button>
+          </div>
+
+          <div class="foots subtleText">
+            <a href="">Legal</a>
+            <a href="">Safety and Privacy Center</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a>
+            <a href="">About Ads</a>
+            <a href="">Accessibility</a>
+          </div>
+
+          <div class="end">
+            <div><u> Cookies </u></div>
+            <button class="curvy-border pop flex-align-centre">
+              <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+              English
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
